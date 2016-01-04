@@ -254,6 +254,15 @@ public abstract class NanoHTTPD {
     }
 
     /**
+     * Create a response with known length.
+     *
+     * TODO: Remove this implementation when updating to v2.2.0.
+     */
+    public static Response newFixedLengthResponse(Response.Status status, String mimeType, String txt) {
+        return new Response(status, mimeType, txt);
+    }
+
+    /**
      * Override this to customize the server.
      * <p/>
      * <p/>
